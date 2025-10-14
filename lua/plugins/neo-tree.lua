@@ -12,6 +12,8 @@ return {
       window = {
         position = "left",
         width = 30,
+        enable_preview = true,
+        
       },
       filesystem = {
         follow_current_file = {
@@ -23,5 +25,6 @@ return {
     
     -- Keybinding
     vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<cr>", { desc = "File Explorer" })
+    vim.keymap.set("n", "<leader>o", "<C-w>p", { desc = "Toggle focus between editor and Neo-tree" })
   end,
 }

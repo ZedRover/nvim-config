@@ -25,6 +25,23 @@ keymap("n", "<leader>wq", "<cmd>wq<CR>", { desc = "Save and quit" })
 keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
 
 -- ========================================
+-- macOS System Shortcuts (Cmd+C/X/V)
+-- ========================================
+
+-- Copy to system clipboard (Cmd+C)
+keymap("v", "<D-c>", '"+y', { desc = "Copy to clipboard" })
+keymap("n", "<D-c>", '"+yy', { desc = "Copy line to clipboard" })
+
+-- Cut to system clipboard (Cmd+X)
+keymap("v", "<D-x>", '"+d', { desc = "Cut to clipboard" })
+keymap("n", "<D-x>", '"+dd', { desc = "Cut line to clipboard" })
+
+-- Paste from system clipboard (Cmd+V)
+keymap("n", "<D-v>", '"+p', { desc = "Paste from clipboard" })
+keymap("i", "<D-v>", '<C-r>+', { desc = "Paste from clipboard" })
+keymap("v", "<D-v>", '"+p', { desc = "Paste from clipboard" })
+
+-- ========================================
 -- Window Management
 -- ========================================
 
@@ -94,3 +111,4 @@ keymap("n", "L", "$", { desc = "Go to end of line" })
 
 -- Terminal toggle
 keymap("n", "<leader>t", "<cmd>terminal<CR>", { desc = "Open terminal" })
+
