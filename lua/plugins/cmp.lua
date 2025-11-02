@@ -5,7 +5,10 @@ return {
     "hrsh7th/cmp-nvim-lsp",     -- LSP completion source
     "hrsh7th/cmp-buffer",       -- Buffer completion source
     "hrsh7th/cmp-path",         -- Path completion source
-    "L3MON4D3/LuaSnip",         -- Snippet engine
+    {
+      "L3MON4D3/LuaSnip",
+      build = "make install_jsregexp",
+    },
     "saadparwaiz1/cmp_luasnip", -- Snippet completion source
   },
   config = function()

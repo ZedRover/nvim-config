@@ -18,6 +18,10 @@ return {
       { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "File Explorer" },
       { "<leader>m", "<cmd>Glow<cr>", desc = "Markdown Preview" },
       
+      -- Window focus
+      { "<leader>h", "<C-w>h", desc = "Focus Left (File Tree)" },
+      { "<leader>l", "<C-w>l", desc = "Focus Right (Editor)" },
+      
       -- Save/Quit
       { "<leader>w", "<cmd>w<cr>", desc = "Save" },
       { "<leader>wq", "<cmd>wq<cr>", desc = "Save & Quit" },
@@ -44,7 +48,7 @@ return {
       { "<leader>f", group = "Format/Find" },
       { "<leader>fm", desc = "Format File" },
       
-      -- Terminal (group) - just show the group, keymaps are in toggleterm.lua
+      -- Terminal (group)
       { "<leader>t", group = "Terminal" },
     })
   end,

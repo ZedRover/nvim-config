@@ -25,23 +25,6 @@ keymap("n", "<leader>wq", "<cmd>wq<CR>", { desc = "Save and quit" })
 keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
 
 -- ========================================
--- macOS System Shortcuts (Cmd+C/X/V)
--- ========================================
-
--- Copy to system clipboard (Cmd+C)
-keymap("v", "<D-c>", '"+y', { desc = "Copy to clipboard" })
-keymap("n", "<D-c>", '"+yy', { desc = "Copy line to clipboard" })
-
--- Cut to system clipboard (Cmd+X)
-keymap("v", "<D-x>", '"+d', { desc = "Cut to clipboard" })
-keymap("n", "<D-x>", '"+dd', { desc = "Cut line to clipboard" })
-
--- Paste from system clipboard (Cmd+V)
-keymap("n", "<D-v>", '"+p', { desc = "Paste from clipboard" })
-keymap("i", "<D-v>", '<C-r>+', { desc = "Paste from clipboard" })
-keymap("v", "<D-v>", '"+p', { desc = "Paste from clipboard" })
-
--- ========================================
 -- Window Management
 -- ========================================
 
@@ -50,6 +33,10 @@ keymap("n", "<leader>sv", "<cmd>vsplit<CR>", { desc = "Split vertical" })
 keymap("n", "<leader>sh", "<cmd>split<CR>", { desc = "Split horizontal" })
 keymap("n", "<leader>sc", "<C-w>c", { desc = "Close window" })
 keymap("n", "<leader>so", "<C-w>o", { desc = "Close other windows" })
+
+-- Quick navigation between file tree and editor
+keymap("n", "<leader>h", "<C-w>h", { desc = "Focus left window (file tree)" })
+keymap("n", "<leader>l", "<C-w>l", { desc = "Focus right window (editor)" })
 
 -- Navigate between windows (Ctrl + hjkl)
 keymap("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
@@ -111,4 +98,3 @@ keymap("n", "L", "$", { desc = "Go to end of line" })
 
 -- Terminal toggle
 keymap("n", "<leader>t", "<cmd>terminal<CR>", { desc = "Open terminal" })
-
